@@ -1,8 +1,3 @@
-Sure! Here's the `README.md` content in an editor-friendly format — you can copy and paste this directly into your project's `README.md` file:
-
----
-
-````markdown
 # 📝 Todo List Application
 
 A full-stack Todo List app built with **React**, **TypeScript**, **TailwindCSS**, **Express**, and **MongoDB**. It allows users to create, view, update, and delete tasks with a clean UI and persistent backend.
@@ -43,7 +38,7 @@ todo-list/
 ├── vite.config.ts               # Vite build configuration
 ├── tsconfig.*.json              # TypeScript configs
 └── .gitignore, README.md        # Project meta
-````
+```
 
 ---
 
@@ -137,5 +132,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Developed by [codeprnv](https://github.com/codeprnv)
 
-```
----
