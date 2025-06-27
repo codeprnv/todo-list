@@ -1,54 +1,141 @@
-# React + TypeScript + Vite
+Sure! Here's the `README.md` content in an editor-friendly format — you can copy and paste this directly into your project's `README.md` file:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+````markdown
+# 📝 Todo List Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A full-stack Todo List app built with **React**, **TypeScript**, **TailwindCSS**, **Express**, and **MongoDB**. It allows users to create, view, update, and delete tasks with a clean UI and persistent backend.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- ✅ Add, edit, and delete todos
+- 🌐 RESTful API with Express & Mongoose
+- ⚛️ React (TypeScript) frontend with modular components
+- 🎯 Global state management using React Context
+- 💅 Styled with TailwindCSS
+- ⚡ Vite for fast frontend development
+- 🧪 Ready for testing and scalable for new features
+
+---
+
+## 🗂️ Project Structure
+
+```plaintext
+todo-list/
+│
+├── server/                      # Backend (Express + Mongoose)
+│   ├── index.js                 # Express server entry point
+│   ├── models/todo.js           # Mongoose schema
+│   └── routes/todos.js          # API routes for todo operations
+│
+├── src/                         # Frontend (React + TypeScript)
+│   ├── Components/              # React UI components
+│   ├── context/                 # Global state (TodoContext)
+│   ├── services/                # API interaction (todoService)
+│   └── main.tsx, App.tsx        # App entry and root component
+│
+├── public/                      # Static files (e.g., favicon)
+├── index.html                   # Main HTML template (for Vite)
+├── package.json                 # Scripts and dependencies
+├── vite.config.ts               # Vite build configuration
+├── tsconfig.*.json              # TypeScript configs
+└── .gitignore, README.md        # Project meta
+````
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+
+* Node.js (v18+ recommended)
+* MongoDB (running locally or via Atlas)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/codeprnv/todo-list.git
+cd todo-list
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+# Install both frontend and backend dependencies
+npm install
 ```
+
+### 3. Configure environment variables
+
+Create a `.env` file in the root or `server/` directory and add:
+
+```env
+MONGO_URI=mongodb://localhost:27017/todos
+PORT=5000
+```
+
+---
+
+## 🧪 Running the Application
+
+### Start Backend Server (Express + MongoDB)
+
+```bash
+cd server
+npm install
+node index.js
+```
+
+### Start Frontend (Vite + React)
+
+```bash
+cd ..
+npm run dev
+```
+
+The app will open at `http://localhost:5173`.
+
+---
+
+## 📁 API Endpoints
+
+Base URL: `http://localhost:5000/api/todos`
+
+| Method | Endpoint | Description         |
+| ------ | -------- | ------------------- |
+| GET    | `/`      | Fetch all todos     |
+| POST   | `/`      | Create a new todo   |
+| PUT    | `/:id`   | Update a todo by ID |
+| DELETE | `/:id`   | Delete a todo by ID |
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend**: React, TypeScript, TailwindCSS, Vite
+* **Backend**: Express.js, Node.js, MongoDB, Mongoose
+* **Dev Tools**: ESLint, Prettier, npm scripts
+
+---
+
+## 🙌 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss your ideas.
+
+---
+
+## 📄 License
+
+[MIT](LICENSE)
+
+---
+
+## 👤 Author
+
+Developed by [codeprnv](https://github.com/codeprnv)
+
+```
+---
